@@ -368,10 +368,10 @@ sap.ui.define([
 			return;
 		}
 		//oObject.getMetadata().getStereoType() + getId()
-		oObject.detachValidationSuccess(this._handleSuccess);
-		oObject.detachValidationError(this._handleError);
-		oObject.detachParseError(this._handleError);
-		oObject.detachFormatError(this._handleError);
+		oObject.detachValidationSuccess(this._handleSuccess, this);
+		oObject.detachValidationError(this._handleError, this);
+		oObject.detachParseError(this._handleError, this);
+		oObject.detachFormatError(this._handleError, this);
 	};
 
 	/**
